@@ -25,53 +25,7 @@
     </div>
 </nav>   
 
+<<! This a comment and this a tempelate code >>
+    
 
-    <div class="container">
-        <div class="task-form-container">
-            <div class="form-group">
-                <label for="taskInput">Task:</label>
-                <input type="text" id="taskInput" class="task-input" placeholder="Add Task">
-            </div>
-            
-            <div class="form-group">
-                <label for="timeInput">Time:</label>
-                <div class="time-input-container">
-                    <input type="time" id="timeInput" class="time-input">
-                    <i class="far fa-clock time-icon"></i>
-                </div>
-            </div>
-
-            <button class="save-task-btn" onclick="saveTask()">Save Task</button>
-        </div>
-
-        <hr class="divider">
-
-        <div class="tasks-section">
-            <h2>Tasks To-Do:</h2>
-            
-            <div class="task-controls">
-                <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Search Tasks" onkeyup="searchTasks()">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-                
-                <select id="filterSelect" onchange="filterTasks()">
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="active">Active</option>
-                </select>
-            </div>
-
-                            <!-- Tasks will be added here -->
-            <div id="taskList" class="task-list">
-
-            </div>
-
-            <div id="noTasks" class="no-tasks">
-                No Tasks Left
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
 </html>
