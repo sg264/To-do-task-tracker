@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Tracker</title>
+    <link rel="icon" type="image/x-icon" href="oo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>User's To-Do-List</h1>
+    <nav class="van">
+        <div class="adjust">
+            <button class="toggle-button" id="toggleButton" onclick="darkmode()">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="adjust" class="svg-inline--fa fa-adjust fa-w-16 fa-2x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path></svg>
+            </button>
+        </div>
+    
+    <div class="github-btn">
+        <button class="toggle-button" id="toggleButton" onclick="github()">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt" class="svg-inline--fa fa-github-alt fa-w-15 fa-2x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+        </button>
+    </div>
+</nav>   
+
+
+    <div class="container">
+        <div class="task-form-container">
+            <div class="form-group">
+                <label for="taskInput">Task:</label>
+                <input type="text" id="taskInput" class="task-input" placeholder="Add Task">
+            </div>
+            
+            <div class="form-group">
+                <label for="timeInput">Time:</label>
+                <div class="time-input-container">
+                    <input type="time" id="timeInput" class="time-input">
+                    <i class="far fa-clock time-icon"></i>
+                </div>
+            </div>
+
+            <button class="save-task-btn" onclick="saveTask()">Save Task</button>
+        </div>
+
+        <hr class="divider">
+
+        <div class="tasks-section">
+            <h2>Tasks To-Do:</h2>
+            
+            <div class="task-controls">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search Tasks" onkeyup="searchTasks()">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
+                <select id="filterSelect" onchange="filterTasks()">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="active">Active</option>
+                </select>
+            </div>
+
+                            <!-- Tasks will be added here -->
+            <div id="taskList" class="task-list">
+
+            </div>
+
+            <div id="noTasks" class="no-tasks">
+                No Tasks Left
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
